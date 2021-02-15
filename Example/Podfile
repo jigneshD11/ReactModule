@@ -1,16 +1,55 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '12.1'
+
+node_modules_path = '../node_modules'
+react_path = File.join(node_modules_path, 'react-native')
 
 target 'ReactModule_Example' do
-  pod 'ReactModule', :path => '../'
+  pod 'ReactModule', :path => "../"
+  prefix = react_path
+  fabric_enabled = false
+  production = true
 
-  target 'ReactModule_Tests' do
-    inherit! :search_paths
+  pod 'FBLazyVector', :path => "#{prefix}/Libraries/FBLazyVector"
+  pod 'FBReactNativeSpec', :path => "#{prefix}/Libraries/FBReactNativeSpec"
+  pod 'RCTRequired', :path => "#{prefix}/Libraries/RCTRequired"
+  pod 'RCTTypeSafety', :path => "#{prefix}/Libraries/TypeSafety"
+  pod 'React', :path => "#{prefix}/"
+  pod 'React-Core', :path => "#{prefix}/"
+  pod 'React-CoreModules', :path => "#{prefix}/React/CoreModules"
+  pod 'React-RCTActionSheet', :path => "#{prefix}/Libraries/ActionSheetIOS"
+  pod 'React-RCTAnimation', :path => "#{prefix}/Libraries/NativeAnimation"
+  pod 'React-RCTBlob', :path => "#{prefix}/Libraries/Blob"
+  pod 'React-RCTImage', :path => "#{prefix}/Libraries/Image"
+  pod 'React-RCTLinking', :path => "#{prefix}/Libraries/LinkingIOS"
+  pod 'React-RCTNetwork', :path => "#{prefix}/Libraries/Network"
+  pod 'React-RCTSettings', :path => "#{prefix}/Libraries/Settings"
+  pod 'React-RCTText', :path => "#{prefix}/Libraries/Text"
+  pod 'React-RCTVibration', :path => "#{prefix}/Libraries/Vibration"
+  pod 'React-Core/RCTWebSocket', :path => "#{prefix}/"
 
-    pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 8.0.7'
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
-    pod 'Nimble-Snapshots' , '~> 8.0.0'
+  unless production
+    pod 'React-Core/DevSupport', :path => "#{prefix}/"
+  end
+
+  pod 'React-cxxreact', :path => "#{prefix}/ReactCommon/cxxreact"
+  pod 'React-jsi', :path => "#{prefix}/ReactCommon/jsi"
+  pod 'React-jsiexecutor', :path => "#{prefix}/ReactCommon/jsiexecutor"
+  pod 'React-jsinspector', :path => "#{prefix}/ReactCommon/jsinspector"
+  pod 'React-callinvoker', :path => "#{prefix}/ReactCommon/callinvoker"
+  pod 'ReactCommon/turbomodule/core', :path => "#{prefix}/ReactCommon"
+  pod 'Yoga', :path => "#{prefix}/ReactCommon/yoga", :modular_headers => true
+
+  pod 'DoubleConversion', :podspec => "#{prefix}/third-party-podspecs/DoubleConversion.podspec"
+  pod 'glog', :podspec => "#{prefix}/third-party-podspecs/glog.podspec"
+  pod 'Folly', :podspec => "#{prefix}/third-party-podspecs/Folly.podspec"
+
+  if fabric_enabled
+    pod 'React-Fabric', :path => "#{prefix}/ReactCommon"
+    pod 'React-graphics', :path => "#{prefix}/ReactCommon/fabric/graphics"
+    pod 'React-jsi/Fabric', :path => "#{prefix}/ReactCommon/jsi"
+    pod 'React-RCTFabric', :path => "#{prefix}/React"
+    pod 'Folly/Fabric', :podspec => "#{prefix}/third-party-podspecs/Folly.podspec"
   end
 end

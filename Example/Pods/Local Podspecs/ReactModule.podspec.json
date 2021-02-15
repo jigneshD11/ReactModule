@@ -1,0 +1,73 @@
+{
+  "name": "ReactModule",
+  "version": "0.0.1",
+  "description": "Components for ReactModule.",
+  "summary": "Components for ReactModule.",
+  "homepage": "https://github.com/Jignesh/ReactModule.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jignesh": "jignesh@dream11.com"
+  },
+  "source": {
+    "git": "https://github.com/Jignesh/ReactModule.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "Pod/Classes/**/*.{h,m}",
+  "resources": "Pod/Assets/{ReactModule.js,assets}",
+  "platforms": {
+    "ios": "12.1"
+  },
+  "dependencies": {
+    "React-Core": [
+      "0.63.4"
+    ],
+    "React-Core/DevSupport": [
+      "0.63.4"
+    ],
+    "React-Core/RCTWebSocket": [
+      "0.63.4"
+    ],
+    "React-RCTActionSheet": [
+      "0.63.4"
+    ],
+    "React-RCTAnimation": [
+      "0.63.4"
+    ],
+    "React-RCTBlob": [
+      "0.63.4"
+    ],
+    "React-RCTImage": [
+      "0.63.4"
+    ],
+    "React-RCTLinking": [
+      "0.63.4"
+    ],
+    "React-RCTNetwork": [
+      "0.63.4"
+    ],
+    "React-RCTSettings": [
+      "0.63.4"
+    ],
+    "React-RCTText": [
+      "0.63.4"
+    ],
+    "React-RCTVibration": [
+      "0.63.4"
+    ],
+    "Yoga": [
+      "1.14.0"
+    ],
+    "DoubleConversion": [
+      "1.1.6"
+    ],
+    "Folly": [
+      "2020.01.13.00"
+    ],
+    "glog": [
+      "0.3.5"
+    ]
+  }
+}
