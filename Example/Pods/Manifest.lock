@@ -246,22 +246,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - ReactModule (0.0.1):
-    - DoubleConversion (= 1.1.6)
-    - Folly (= 2020.01.13.00)
-    - glog (= 0.3.5)
-    - React-Core (= 0.63.4)
-    - React-Core/DevSupport (= 0.63.4)
-    - React-Core/RCTWebSocket (= 0.63.4)
-    - React-RCTActionSheet (= 0.63.4)
-    - React-RCTAnimation (= 0.63.4)
-    - React-RCTBlob (= 0.63.4)
-    - React-RCTImage (= 0.63.4)
-    - React-RCTLinking (= 0.63.4)
-    - React-RCTNetwork (= 0.63.4)
-    - React-RCTSettings (= 0.63.4)
-    - React-RCTText (= 0.63.4)
-    - React-RCTVibration (= 0.63.4)
-    - Yoga (= 1.14.0)
+    - React (= 0.63.4)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -381,7 +366,7 @@ SPEC CHECKSUMS:
   React-RCTText: 5c51df3f08cb9dedc6e790161195d12bac06101c
   React-RCTVibration: ae4f914cfe8de7d4de95ae1ea6cc8f6315d73d9d
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
-  ReactModule: 1792ff524fabdd2116796c43ac0dfcb9f26e7351
+  ReactModule: 2a4bf58ccef5ee01d467a8fb954f66a1a4e4244b
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
 
 PODFILE CHECKSUM: 1a1a420cdd6be8abb1ab00a87c0dd31fc58153f1

@@ -22,27 +22,26 @@ Pod::Spec.new do |s|
   s.platform       = :ios, '12.1'
 
   # React is split into a set of subspecs, these are the essentials
-  s.dependency 'React-Core', react_native_version
-  s.dependency 'React-Core/DevSupport', react_native_version
-  s.dependency 'React-Core/RCTWebSocket', react_native_version
-  s.dependency 'React-RCTActionSheet', react_native_version
-  s.dependency 'React-RCTAnimation', react_native_version
-  s.dependency 'React-RCTBlob', react_native_version
-  s.dependency 'React-RCTImage', react_native_version
-  s.dependency 'React-RCTLinking', react_native_version
-  s.dependency 'React-RCTNetwork', react_native_version
-  s.dependency 'React-RCTSettings', react_native_version
-  s.dependency 'React-RCTText', react_native_version
-  s.dependency 'React-RCTVibration', react_native_version
-  
-  podspecs = [
-    'node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
-    'node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
-    'node_modules/react-native/third-party-podspecs/Folly.podspec',
-    'node_modules/react-native/third-party-podspecs/glog.podspec'
-  ]
-  podspecs.each do |podspec_path|
-    spec = Pod::Specification.from_file podspec_path
-    s.dependency spec.name, "#{spec.version}"
-  end
+  s.dependency 'React', react_native_version
+  # s.dependency 'React-Core/DevSupport', react_native_version
+  # s.dependency 'React-Core/RCTWebSocket', react_native_version
+  # s.dependency 'React-RCTActionSheet', react_native_version
+  # s.dependency 'React-RCTAnimation', react_native_version
+  # s.dependency 'React-RCTBlob', react_native_version
+  # s.dependency 'React-RCTImage', react_native_version
+  # s.dependency 'React-RCTLinking', react_native_version
+  # s.dependency 'React-RCTNetwork', react_native_version
+  # s.dependency 'React-RCTSettings', react_native_version
+  # s.dependency 'React-RCTText', react_native_version
+  # s.dependency 'React-RCTVibration', react_native_version
+  # podspecs = [
+  #   'node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
+  #   'node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
+  #   'node_modules/react-native/third-party-podspecs/Folly.podspec',
+  #   'node_modules/react-native/third-party-podspecs/glog.podspec'
+  # ]
+  # podspecs.each do |podspec_path|
+  #   spec = Pod::Specification.from_file podspec_path
+  #   s.dependency spec.name, "#{spec.version}"
+  # end
 end
