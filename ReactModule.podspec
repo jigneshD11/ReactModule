@@ -1,12 +1,12 @@
-# require 'json'
+require 'json'
 
-# pkg_version = lambda do |dir_from_root = '', version = 'version'|
-#   path = File.join(__dir__, dir_from_root, 'package.json')
-#   JSON.parse(File.read(path))[version]
-# end
+pkg_version = lambda do |dir_from_root = '', version = 'version'|
+  path = File.join(__dir__, dir_from_root, 'package.json')
+  JSON.parse(File.read(path))[version]
+end
 
-# rcmodule_version = pkg_version.call
-# react_native_version = pkg_version.call('node_modules/react-native')
+rcmodule_version = pkg_version.call
+react_native_version = pkg_version.call('node_modules/react-native')
 
 Pod::Spec.new do |s|
   s.name             = 'ReactModule'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.platform       = :ios, '12.1'
 
   # React is split into a set of subspecs, these are the essentials
-  # s.dependency 'React', react_native_version
+  s.dependency 'React', react_native_version
   # s.dependency 'React-Core/DevSupport', react_native_version
   # s.dependency 'React-Core/RCTWebSocket', react_native_version
   # s.dependency 'React-RCTActionSheet', react_native_version
@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   # s.dependency 'React-RCTSettings', react_native_version
   # s.dependency 'React-RCTText', react_native_version
   # s.dependency 'React-RCTVibration', react_native_version
+  
   # podspecs = [
   #   'node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
   #   'node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
