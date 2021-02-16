@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.platform       = :ios, '12.1'
 
   # React is split into a set of subspecs, these are the essentials
-  # s.dependency 'React', react_native_version
+  s.dependency 'React', "~> 0.63.4"
   # s.dependency 'React-Core/DevSupport', react_native_version
   # s.dependency 'React-Core/RCTWebSocket', react_native_version
   # s.dependency 'React-RCTActionSheet', react_native_version
