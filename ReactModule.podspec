@@ -10,7 +10,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReactModule'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.description      = 'Components for ReactModule.'
   s.summary          = 'Components for ReactModule.'
   s.homepage         = 'https://github.com/Jignesh/ReactModule.git'
