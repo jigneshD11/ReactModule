@@ -23,17 +23,21 @@ Pod::Spec.new do |s|
 
   # React is split into a set of subspecs, these are the essentials
   s.dependency 'React', "~> 0.63.4"
-  # s.dependency 'React-Core/DevSupport', react_native_version
-  # s.dependency 'React-Core/RCTWebSocket', react_native_version
-  # s.dependency 'React-RCTActionSheet', react_native_version
-  # s.dependency 'React-RCTAnimation', react_native_version
-  # s.dependency 'React-RCTBlob', react_native_version
-  # s.dependency 'React-RCTImage', react_native_version
-  # s.dependency 'React-RCTLinking', react_native_version
-  # s.dependency 'React-RCTNetwork', react_native_version
-  # s.dependency 'React-RCTSettings', react_native_version
-  # s.dependency 'React-RCTText', react_native_version
-  # s.dependency 'React-RCTVibration', react_native_version
+  s.dependency 'React-Core/DevSupport', "~> 0.63.4"
+  s.dependency 'React-Core/RCTWebSocket', "~> 0.63.4"
+  s.dependency 'React-RCTActionSheet', "~> 0.63.4"
+  s.dependency 'React-RCTAnimation', "~> 0.63.4"
+  s.dependency 'React-RCTBlob', "~> 0.63.4"
+  s.dependency 'React-RCTImage', "~> 0.63.4"
+  s.dependency 'React-RCTLinking', "~> 0.63.4"
+  s.dependency 'React-RCTNetwork', "~> 0.63.4"
+  s.dependency 'React-RCTSettings', "~> 0.63.4"
+  s.dependency 'React-RCTText', "~> 0.63.4"
+  s.dependency 'React-RCTVibration', "~> 0.63.4"
+  s.dependency 'Yoga' , "~> 1.14.0"
+  s.dependency 'DoubleConversion' , "~> 1.1.6"
+  s.dependency 'glog' , "~> 0.3.5"
+  s.dependency 'Folly' , "~> 2020.01.13.00"
   
   # podspecs = [
   #   'node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
