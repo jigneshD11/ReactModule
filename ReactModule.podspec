@@ -1,16 +1,16 @@
-require 'json'
+# require 'json'
 
-pkg_version = lambda do |dir_from_root = '', version = 'version'|
-  path = File.join(__dir__, dir_from_root, 'package.json')
-  JSON.parse(File.read(path))[version]
-end
+# pkg_version = lambda do |dir_from_root = '', version = 'version'|
+#   path = File.join(__dir__, dir_from_root, 'package.json')
+#   JSON.parse(File.read(path))[version]
+# end
 
-rcmodule_version = pkg_version.call
-react_native_version = pkg_version.call('node_modules/react-native')
+# rcmodule_version = pkg_version.call
+# react_native_version = pkg_version.call('node_modules/react-native')
 
 Pod::Spec.new do |s|
   s.name             = 'ReactModule'
-  s.version          = rcmodule_version
+  s.version          = '0.0.0'
   s.description      = 'Components for ReactModule.'
   s.summary          = 'Components for ReactModule.'
   s.homepage         = 'https://github.com/Jignesh/ReactModule.git'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.platform       = :ios, '12.1'
 
   # React is split into a set of subspecs, these are the essentials
-  s.dependency 'React', react_native_version
+  # s.dependency 'React', react_native_version
   # s.dependency 'React-Core/DevSupport', react_native_version
   # s.dependency 'React-Core/RCTWebSocket', react_native_version
   # s.dependency 'React-RCTActionSheet', react_native_version
